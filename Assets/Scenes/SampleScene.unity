@@ -302,6 +302,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 933982157}
+  - component: {fileID: 933982159}
+  - component: {fileID: 933982158}
   m_Layer: 5
   m_Name: Keyboard
   m_TagString: Untagged
@@ -330,6 +332,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &933982158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933982156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59130d4a51e7ab42970ea3858e73855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  model: {fileID: 933982159}
+--- !u!114 &933982159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933982156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e6b178ae0968a478a26ee3b7f4f27c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectTransform: {fileID: 281716276}
+  widthPercentage: 1
+  heightPercentage: 0.368
+  bottomOffset: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
