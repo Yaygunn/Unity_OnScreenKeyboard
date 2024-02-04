@@ -1,3 +1,4 @@
+using Palmmedia.ReportGenerator.Core.Parser.Analysis;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,15 @@ public class KeyboardController : MonoBehaviour
     [SerializeField] private KeyboardModel model;
     void Start()
     {
-        
+        SetKeyboardTransform();
+        CreateKeys();
+        PlaceKeys();
     }
 
     void Update()
     {
         SetKeyboardTransform();
+        PlaceKeys() ;
     }
 
     private void SetKeyboardTransform()
@@ -31,6 +35,57 @@ public class KeyboardController : MonoBehaviour
 
         model.rectTransform.position = pos;
 
+    }
+
+    private void CreateKeys()
+    {
+        for(int i = 0; i<model.lines.Length; i++)
+        {
+            for(int j=0; j< model.lines[i].Keys.Length; j++)
+            {
+                char key = model.lines[i].Keys[j];
+
+                Key KeyInstance = Instantiate(model.KeyPrefab, model.rectTransform);
+                KeyInstance.SetKey(key);
+            }
+        }
+    }
+
+    private void PlaceKeys()
+    {
+        int LineCount = model.lines.Length;
+
+        float LineHeight = model.rectTransform.rect.height / LineCount;
+
+        float keyWidth = LineHeight * model.KeyToLineRatio;
+
+        float xSpacing = model.xSpacing * LineHeight;
+
+        int CurrentKeyIndex = 0;
+
+        for(int i = 0; i < LineCount; i++)
+        {
+            float  halfKeyCount = (float)model.lines[i].Keys.Length / 2;
+
+            float startX = model.rectTransform.position.x - (keyWidth * halfKeyCount) + keyWidth / 2;
+
+            float lineY = model.rectTransform.position.y + model.rectTransform.rect.height / 2 - LineHeight / 2 - i * LineHeight;
+
+            for(int j = 0; j < model.lines[i].Keys.Length; j++)
+            {
+                float keyX = startX + j * keyWidth;
+
+                Vector2 keyPosition = new Vector2(keyX, lineY);
+
+                RectTransform keyRectTransform = model.rectTransform.GetChild(CurrentKeyIndex).GetComponent<RectTransform>();
+
+                keyRectTransform.position = keyPosition;
+
+                keyRectTransform.sizeDelta = new Vector2(keyWidth, keyWidth);
+
+                CurrentKeyIndex++;
+            }
+        }
     }
 
 }

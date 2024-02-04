@@ -14,4 +14,17 @@ public class KeyboardModel : MonoBehaviour
     [Range(0f, 0.5f)]
     [SerializeField] public float bottomOffset;
 
+    [Header("Keyboard Lines")]
+    [SerializeField] public S_KeyboardLine[] lines;
+
+    [Header("Key Size")]
+    [Range(0f, 1f)]
+    [SerializeField] public float KeyToLineRatio;
+    [Range(0f, 1f)]
+    [SerializeField] public float xSpacing;
+
+    [Header("Prefabs")]
+    [SerializeField] public Key KeyPrefab;
+
+
 }

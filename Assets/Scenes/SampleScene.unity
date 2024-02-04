@@ -361,6 +361,10 @@ MonoBehaviour:
   widthPercentage: 1
   heightPercentage: 0.368
   bottomOffset: 0
+  lines:
+  - Keys: qwe
+  - Keys: asd
+  - Keys: zxc
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
