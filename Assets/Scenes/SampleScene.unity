@@ -359,12 +359,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 281716276}
   widthPercentage: 1
-  heightPercentage: 0.368
-  bottomOffset: 0
+  heightPercentage: 0.328
+  bottomOffset: 0.361
   lines:
-  - Keys: qwe
-  - Keys: asd
-  - Keys: zxc
+  - Keys: "qwertyu\u0131op"
+  - Keys: asdfghjkl
+  - Keys: zxcvbnm
+  KeyToLineRatio: 0.801
+  xSpacing: 0.313
+  KeyPrefab: {fileID: 7948045761381702253, guid: 854dd2d0fb9e23344946326f4eadcf23, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

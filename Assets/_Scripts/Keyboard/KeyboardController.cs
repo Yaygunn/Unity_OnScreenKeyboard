@@ -67,13 +67,13 @@ public class KeyboardController : MonoBehaviour
         {
             float  halfKeyCount = (float)model.lines[i].Keys.Length / 2;
 
-            float startX = model.rectTransform.position.x - (keyWidth * halfKeyCount) + keyWidth / 2;
+            float startX = model.rectTransform.position.x - (keyWidth+xSpacing) * halfKeyCount + (keyWidth +xSpacing)/ 2;
 
             float lineY = model.rectTransform.position.y + model.rectTransform.rect.height / 2 - LineHeight / 2 - i * LineHeight;
 
             for(int j = 0; j < model.lines[i].Keys.Length; j++)
             {
-                float keyX = startX + j * keyWidth;
+                float keyX = startX + j * (keyWidth + xSpacing);
 
                 Vector2 keyPosition = new Vector2(keyX, lineY);
 
