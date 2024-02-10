@@ -6,16 +6,15 @@ using UnityEngine;
 public class TextShow : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _textMeshPro;
-    void Start()
+    private void OnEnable()
     {
-        SetText("sda");
+        KeyManager.Instance.WritingChanged += SetText;
+    }
+    private void OnDisable()
+    {
+        KeyManager.Instance.WritingChanged -= SetText;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void SetText(string text)
     {
