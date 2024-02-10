@@ -364,7 +364,7 @@ MonoBehaviour:
   lines:
   - Keys: "qwertyu\u0131op"
   - Keys: asdfghjkl
-  - Keys: zxcvbnm
+  - Keys: zxcvbnm.
   KeyToLineRatio: 0.776
   xSpacing: 0.09
   KeyPrefab: {fileID: 7948045761381702253, guid: 854dd2d0fb9e23344946326f4eadcf23, type: 3}

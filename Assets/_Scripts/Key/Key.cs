@@ -16,7 +16,7 @@ public class Key : MonoBehaviour
     {
         ShowKey();
     }
-    public void SetKey(char key)
+    public virtual void SetKey(char key)
     {
         this.key = key;
         ShowKey();
