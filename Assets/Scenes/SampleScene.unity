@@ -367,6 +367,9 @@ MonoBehaviour:
   - Keys: zxcvbnm.
   KeyToLineRatio: 0.776
   xSpacing: 0.09
+  ExtraBackSpaceSpacing: 0.76
+  BackSpaceKeySize: 2
+  BackSpaceKeyLineSlideLeft: 0.2
   KeyPrefab: {fileID: 7948045761381702253, guid: 854dd2d0fb9e23344946326f4eadcf23, type: 3}
   BackSpaceKey: {fileID: 1814366427765836338, guid: 5c6e3f5e59f36bf4384c4ddb81ca6ca8, type: 3}
 --- !u!1 &963194225

@@ -22,6 +22,12 @@ public class KeyboardModel : MonoBehaviour
     [SerializeField] public float KeyToLineRatio;
     [Range(0f, 1f)]
     [SerializeField] public float xSpacing;
+    [Range(0f, 2f)]
+    [SerializeField] public float ExtraBackSpaceSpacing;
+    [Range(1f, 3f)]
+    [SerializeField] public float BackSpaceKeySize;
+    [Range(0f, 3f)]
+    [SerializeField] public float BackSpaceKeyLineSlideLeft;
 
     [Header("Prefabs")]
     [SerializeField] public Key KeyPrefab;

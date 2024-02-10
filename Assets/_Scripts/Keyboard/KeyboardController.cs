@@ -74,21 +74,42 @@ public class KeyboardController : MonoBehaviour
         {
             float  halfKeyCount = (float)model.lines[i].Keys.Length / 2;
 
+            bool ContainsBackSpace = model.lines[i].Keys.Contains(".");
+
+            if (ContainsBackSpace)
+            {
+                halfKeyCount += model.BackSpaceKeyLineSlideLeft;
+            }
+
+
             float startX = model.rectTransform.position.x - (keyWidth+xSpacing) * halfKeyCount + (keyWidth +xSpacing)/ 2;
 
-            float lineY = model.rectTransform.position.y + model.rectTransform.rect.height / 2 - LineHeight / 2 - i * LineHeight;
+            float lineY = model.rectTransform.position.y + model.rectTransform.rect.height / 2 - LineHeight / 2 - i * LineHeight;        
 
-            for(int j = 0; j < model.lines[i].Keys.Length; j++)
+            for (int j = 0; j < model.lines[i].Keys.Length; j++)
             {
                 float keyX = startX + j * (keyWidth + xSpacing);
+
+                bool isBackSpaceKey = model.lines[i].Keys[j].Equals('.');
+                if(isBackSpaceKey)
+                {
+                    keyX += model.ExtraBackSpaceSpacing * keyWidth;
+                }
 
                 Vector2 keyPosition = new Vector2(keyX, lineY);
 
                 RectTransform keyRectTransform = model.rectTransform.GetChild(CurrentKeyIndex).GetComponent<RectTransform>();
 
+                float thiskeyWidth = keyWidth;
+
+                if(isBackSpaceKey)
+                {
+                    thiskeyWidth = keyWidth*model.BackSpaceKeySize;
+                }
+
                 keyRectTransform.position = keyPosition;
 
-                keyRectTransform.sizeDelta = new Vector2(keyWidth, keyWidth);
+                keyRectTransform.sizeDelta = new Vector2(thiskeyWidth, keyWidth);
 
                 CurrentKeyIndex++;
             }
