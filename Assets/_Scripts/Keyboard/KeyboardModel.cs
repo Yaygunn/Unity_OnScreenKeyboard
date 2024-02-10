@@ -21,6 +21,8 @@ public class KeyboardModel : MonoBehaviour
     [Range(0f, 1f)]
     [SerializeField] public float KeyToLineRatio;
     [Range(0f, 1f)]
+    [SerializeField] public float WidhtToHeightRatio;
+    [Range(0f, 1f)]
     [SerializeField] public float xSpacing;
     [Range(0f, 2f)]
     [SerializeField] public float ExtraBackSpaceSpacing;

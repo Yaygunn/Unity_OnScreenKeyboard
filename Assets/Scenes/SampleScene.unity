@@ -359,13 +359,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 281716276}
   widthPercentage: 1
-  heightPercentage: 0.194
-  bottomOffset: 0.361
+  heightPercentage: 0.277
+  bottomOffset: 0.019
   lines:
   - Keys: "qwertyu\u0131op"
   - Keys: asdfghjkl
   - Keys: zxcvbnm.
-  KeyToLineRatio: 0.776
+  KeyToLineRatio: 0.755
+  WidhtToHeightRatio: 0.707
   xSpacing: 0.09
   ExtraBackSpaceSpacing: 0.76
   BackSpaceKeySize: 2
@@ -704,8 +705,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 144
-  m_fontSizeBase: 144
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

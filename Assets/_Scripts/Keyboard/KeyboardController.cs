@@ -64,7 +64,9 @@ public class KeyboardController : MonoBehaviour
 
         float LineHeight = model.rectTransform.rect.height / LineCount;
 
-        float keyWidth = LineHeight * model.KeyToLineRatio;
+        float keyHeight = LineHeight * model.KeyToLineRatio;
+
+        float keyWidth = keyHeight * model.WidhtToHeightRatio;
 
         float xSpacing = model.xSpacing * LineHeight;
 
@@ -109,7 +111,7 @@ public class KeyboardController : MonoBehaviour
 
                 keyRectTransform.position = keyPosition;
 
-                keyRectTransform.sizeDelta = new Vector2(thiskeyWidth, keyWidth);
+                keyRectTransform.sizeDelta = new Vector2(thiskeyWidth, keyHeight);
 
                 CurrentKeyIndex++;
             }
