@@ -8,9 +8,9 @@ public class Key : MonoBehaviour
     [SerializeField] private char key;
     [SerializeField] private TextMeshProUGUI textMeshPro;
 
-    public void ButtonClicked()
+    public virtual void ButtonClicked()
     {
-        print(key);//change this
+        KeyManager.Instance.KeyPressed(key);
     }
     private void Start()
     {

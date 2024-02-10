@@ -6,15 +6,15 @@ public class BackSpaceKey : Key
 {
     private void Start()
     {
-        
+        //prevents parent start fire
     }
     public void BackSpaceButtonClicked()
     {
-        print("backspace");//change this
+        KeyManager.Instance.BackSpaceKeyPressed();
     }
 
     public override void SetKey(char key)
     {
-        
+        //prevents parent setket fire
     }
 }
