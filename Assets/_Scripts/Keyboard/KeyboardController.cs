@@ -45,8 +45,15 @@ public class KeyboardController : MonoBehaviour
             {
                 char key = model.lines[i].Keys[j];
 
-                Key KeyInstance = Instantiate(model.KeyPrefab, model.rectTransform);
-                KeyInstance.SetKey(key);
+                if(key == '.')
+                {
+                    Key KeyInstance = Instantiate(model.BackSpaceKey, model.rectTransform);
+                }
+                else
+                {
+                    Key KeyInstance = Instantiate(model.KeyPrefab, model.rectTransform);
+                    KeyInstance.SetKey(key);
+                }            
             }
         }
     }

@@ -25,6 +25,7 @@ public class KeyboardModel : MonoBehaviour
 
     [Header("Prefabs")]
     [SerializeField] public Key KeyPrefab;
+    [SerializeField] public BackSpaceKey BackSpaceKey;
 
 
 }
